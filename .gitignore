@@ -34,3 +34,10 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+.DS_Store
+UmaUma/Assets/.DS_Store
+UmaUma/Assets/blender_models/Materials.meta
+UmaUma/Assets/blender_models/Materials/coconut_good.jpg
+UmaUma/Assets/blender_models/Materials/coconut_good.jpg.meta
+UmaUma/Assets/Scenes/SampleScene.unity
+.DS_Store
