@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveWater : MonoBehaviour {
 
-	public float power = 3;
+	public float power = 0.8f;
 	public float scale = 1;
 	public float timeScale = 1;
 

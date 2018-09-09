@@ -5,7 +5,9 @@ using UnityEngine;
 public class WorldMap : MonoBehaviour {
 
 	public Terrain WorldTerrain;
+	//public Terrain Water;
 	public LayerMask TerrainLayer;
+	//public LayerMask WaterLayer;
 	public static float TerrainLeft, TerrainRight, TerrainBottom, TerrainWidth, TerrainLength, TerrainHeight, TerrainTop;
 
 	public static ArrayList units = new ArrayList();
@@ -25,7 +27,6 @@ public class WorldMap : MonoBehaviour {
 		InstantiateRandomPosition("Prefabs/Bad_Coconut", 700, 0.5f);
 		InstantiateRandomPosition("Prefabs/Cactus_Tall", 2000, 0f);
 		InstantiateRandomPosition("Prefabs/Good_Coconut", 500, 0.5f);
-
 		
 	}
 
@@ -45,6 +46,10 @@ public class WorldMap : MonoBehaviour {
 
 			if (Physics.Raycast(new Vector3(randomPositionX, 9999f, randomPositionZ), Vector3.down, out hit, Mathf.Infinity, TerrainLayer)) {
 				terrainHeight = hit.point.y;
+			}
+
+			if (hit.point.y < 1) {
+				terrainHeight = -100;
 			}
 
 			randomPositionY = terrainHeight + AddedHeight;

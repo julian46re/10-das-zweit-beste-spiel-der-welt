@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class WaterPlaneGenerator : MonoBehaviour {
 
+	//public LayerMask IgnoreRaycast;
 
-	public float size = 1;
-	public int gridSize = 16;
+	public float size = 800;
+	public int gridSize = 64;
 
 	private MeshFilter filter;
 
