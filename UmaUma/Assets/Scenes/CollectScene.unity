@@ -1259,7 +1259,7 @@ GameObject:
   - component: {fileID: 649989115}
   - component: {fileID: 649989114}
   m_Layer: 0
-  m_Name: WorldTerrain
+  m_Name: WorldMap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1429,19 +1429,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.64008397, y: 1.532506, z: 0.67069}
   m_Center: {x: 0, y: 0.69198394, z: -0.009954989}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
---- !u!1 &919287826 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1989290484677718, guid: fa7c29ef8134b414b85ac8cad0f8418f,
-    type: 2}
-  m_PrefabInternal: {fileID: 1341166474}
-=======
-=======
->>>>>>> e17350346122923f9c6412f5823195bc3b270281
-=======
->>>>>>> e17350346122923f9c6412f5823195bc3b270281
 --- !u!1 &933841405
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,13 +1550,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> e17350346122923f9c6412f5823195bc3b270281
-=======
->>>>>>> e17350346122923f9c6412f5823195bc3b270281
-=======
->>>>>>> e17350346122923f9c6412f5823195bc3b270281
 --- !u!1001 &947594338
 Prefab:
   m_ObjectHideFlags: 0
@@ -1733,7 +1713,6 @@ GameObject:
   - component: {fileID: 1132919758}
   - component: {fileID: 1132919760}
   - component: {fileID: 1132919759}
-  - component: {fileID: 1132919761}
   m_Layer: 0
   m_Name: Score Text
   m_TagString: Untagged
@@ -1798,20 +1777,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1132919757}
---- !u!114 &1132919761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1132919757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3237df8be843c42009c88062734b5e98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scoreTextObject: {fileID: 1132919757}
-  WorldGenerator: {fileID: 1687681491}
-  score: 0
 --- !u!1001 &1137345043
 Prefab:
   m_ObjectHideFlags: 0
@@ -1969,7 +1934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43627fb699a83c94bb44ff317902d718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axe: {fileID: 919287826}
+  axe: {fileID: 0}
 --- !u!45 &1312792910
 Skybox:
   m_ObjectHideFlags: 0
@@ -2335,6 +2300,7 @@ GameObject:
   - component: {fileID: 1443172443}
   - component: {fileID: 1443172442}
   - component: {fileID: 1443172441}
+  - component: {fileID: 1443172446}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -2424,6 +2390,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1443172446
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443172440}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 800, y: 1, z: 800}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1502307666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2451,9 +2429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3237df8be843c42009c88062734b5e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreTextObject: {fileID: 1132919757}
-  WorldGenerator: {fileID: 0}
-  score: 0
+  scoreTextObject: {fileID: 0}
 --- !u!4 &1502307668
 Transform:
   m_ObjectHideFlags: 0
@@ -2608,7 +2584,7 @@ GameObject:
   - component: {fileID: 1687681492}
   - component: {fileID: 1687681491}
   m_Layer: 0
-  m_Name: WorldGenerator
+  m_Name: World
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
