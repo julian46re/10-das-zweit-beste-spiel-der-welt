@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
     public GameObject scoreTextObject;
-    
-    int score;
+
+    public int score;
     Text scoreText;
+
 
     //Function for begin of game
     private void Awake() {
@@ -21,6 +22,9 @@ public class GameManager : MonoBehaviour {
         //Show begin score
         scoreText = scoreTextObject.GetComponent<Text>();
         scoreText.text = "Score: " + score.ToString();
+
+
+
     }   
     
     //Collect Coconut
