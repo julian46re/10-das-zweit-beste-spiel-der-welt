@@ -1431,12 +1431,15 @@ BoxCollider:
   m_Center: {x: 0, y: 0.69198394, z: -0.009954989}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &919287826 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1989290484677718, guid: fa7c29ef8134b414b85ac8cad0f8418f,
     type: 2}
   m_PrefabInternal: {fileID: 1341166474}
 =======
+=======
+>>>>>>> e17350346122923f9c6412f5823195bc3b270281
 =======
 >>>>>>> e17350346122923f9c6412f5823195bc3b270281
 --- !u!1 &933841405
@@ -1561,6 +1564,9 @@ CharacterController:
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> e17350346122923f9c6412f5823195bc3b270281
+=======
 >>>>>>> e17350346122923f9c6412f5823195bc3b270281
 =======
 >>>>>>> e17350346122923f9c6412f5823195bc3b270281
