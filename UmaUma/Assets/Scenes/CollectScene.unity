@@ -1568,6 +1568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreTextObject: {fileID: 1132919757}
+  score: 0
 --- !u!1001 &947594338
 Prefab:
   m_ObjectHideFlags: 0
@@ -2447,7 +2448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3237df8be843c42009c88062734b5e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreTextObject: {fileID: 0}
+  scoreTextObject: {fileID: 1132919757}
+  score: 0
 --- !u!4 &1502307668
 Transform:
   m_ObjectHideFlags: 0
@@ -2620,6 +2622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   WorldTerrain: {fileID: 649989115}
+  _GameManager: {fileID: 933841412}
   TerrainLayer:
     serializedVersion: 2
     m_Bits: 1

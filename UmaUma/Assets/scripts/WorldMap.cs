@@ -5,7 +5,7 @@ using UnityEngine;
 public class WorldMap : MonoBehaviour {
 
 	public Terrain WorldTerrain;
-	//public Terrain Water;
+	public GameManager _GameManager;
 	public LayerMask TerrainLayer;
 	//public LayerMask WaterLayer;
 	public static float TerrainLeft, TerrainRight, TerrainBottom, TerrainWidth, TerrainLength, TerrainHeight, TerrainTop;
@@ -13,6 +13,8 @@ public class WorldMap : MonoBehaviour {
 	public static ArrayList units = new ArrayList();
 	public static ArrayList positions = new ArrayList();
 	public static ArrayList rotations = new ArrayList();
+
+	int scNew = 0;
 
 	public void Awake() {
 
@@ -29,6 +31,18 @@ public class WorldMap : MonoBehaviour {
 		InstantiateRandomPosition("Prefabs/Good_Coconut", 500, 0.5f);
 		
 	}
+
+
+ 	public void Update() {
+
+ 		int sc = _GameManager.GetComponent<GameManager>().score;
+
+        if ((sc != scNew) && (scNew < sc)) {
+            InstantiateRandomPosition("Prefabs/Cactus_Tall", 25, 0f);
+            scNew = sc;
+        }
+
+    }
 
 
 	public void InstantiateRandomPosition(string Resource, int Amount, float AddedHeight) {
