@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class WorldMap : MonoBehaviour {
 
+
 	public Terrain WorldTerrain;
-	//public Terrain Water;
 	public LayerMask TerrainLayer;
-	//public LayerMask WaterLayer;
 	public static float TerrainLeft, TerrainRight, TerrainBottom, TerrainWidth, TerrainLength, TerrainHeight, TerrainTop;
 
 	public static ArrayList units = new ArrayList();
@@ -25,11 +24,14 @@ public class WorldMap : MonoBehaviour {
 		TerrainTop = TerrainBottom + TerrainLength;
 
 		InstantiateRandomPosition("Prefabs/Bad_Coconut", 700, 0.5f);
-		InstantiateRandomPosition("Prefabs/Cactus_Tall", 2000, 0f);
+		//InstantiateRandomPosition("Prefabs/Cactus_Tall", 2000, 0f);
 		InstantiateRandomPosition("Prefabs/Good_Coconut", 500, 0.5f);
+
+
 		
 	}
 
+	//  
 
 	public void InstantiateRandomPosition(string Resource, int Amount, float AddedHeight) {
 

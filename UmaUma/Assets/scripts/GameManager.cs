@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
     public GameObject scoreTextObject;
+
+    public WorldMap WorldGenerator;
     
-    int score;
+    public int score;
     Text scoreText;
 
     //Function for begin of game
