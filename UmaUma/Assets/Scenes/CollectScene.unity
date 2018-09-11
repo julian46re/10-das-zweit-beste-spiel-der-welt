@@ -1508,6 +1508,7 @@ GameObject:
   - component: {fileID: 933841406}
   - component: {fileID: 933841411}
   - component: {fileID: 933841412}
+  - component: {fileID: 933841413}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2091,6 +2092,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!114 &1312792909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2103,6 +2105,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axe: {fileID: 265028946}
+=======
+>>>>>>> b6f503241177856e42abfbe24ff4cfdbb385179d
 --- !u!45 &1312792910
 Skybox:
   m_ObjectHideFlags: 0
