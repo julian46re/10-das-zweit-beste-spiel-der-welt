@@ -1448,6 +1448,7 @@ GameObject:
   - component: {fileID: 933841406}
   - component: {fileID: 933841411}
   - component: {fileID: 933841412}
+  - component: {fileID: 933841413}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1569,6 +1570,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreTextObject: {fileID: 1132919757}
   score: 0
+--- !u!114 &933841413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 933841405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43627fb699a83c94bb44ff317902d718, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axe: {fileID: 265028946}
 --- !u!1001 &947594338
 Prefab:
   m_ObjectHideFlags: 0
@@ -1934,7 +1947,6 @@ GameObject:
   - component: {fileID: 1312792912}
   - component: {fileID: 1312792911}
   - component: {fileID: 1312792910}
-  - component: {fileID: 1312792909}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -1942,18 +1954,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1312792909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1312792908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43627fb699a83c94bb44ff317902d718, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axe: {fileID: 265028946}
 --- !u!45 &1312792910
 Skybox:
   m_ObjectHideFlags: 0
