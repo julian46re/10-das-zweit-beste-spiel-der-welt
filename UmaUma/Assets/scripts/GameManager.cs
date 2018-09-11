@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
 
     public int score;
     Text scoreText;
+    Text winText;
 
 
     //Function for begin of game
@@ -35,6 +36,14 @@ public class GameManager : MonoBehaviour {
 
         score = score + passedValue;
         scoreText.text = "Score: " + score.ToString();    
+
+       	if(score >= 100) {
+        
+        	winText = GameObject.Find("Collision Text").GetComponent<Text>();
+        	winText.enabled = true;
+        	winText.text = "Glückwunsch!";
+    
+        } 
     }
     
     //Collect Negative Coconut

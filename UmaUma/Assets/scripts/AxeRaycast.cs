@@ -26,7 +26,7 @@ public class AxeRaycast : MonoBehaviour {
         RaycastHit hit;
         //Origin, Direction, RaycastHit, Length
         if(Physics.Raycast(transform.position, fwd, out hit, 5)) {
-            if(hit.collider.tag == "tree" && Input.GetKeyDown(KeyCode.E) && isEquiped == true) {
+            if(hit.collider.tag == "tree" && Input.GetMouseButtonDown(0) && isEquiped == true) {
                 //Debug.Log("hit");
                 Tree treeScript = hit.collider.gameObject.GetComponent<Tree>();
                 treeScript.treeHealth = treeScript.treeHealth - 1;
