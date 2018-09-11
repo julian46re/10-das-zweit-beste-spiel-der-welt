@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class playerControl : MonoBehaviour {
 
-	public float moveSpeed;
-	public float jumpForce;
+	public float moveSpeed = 15f;
+	public float jumpForce = 10f;
 	public CharacterController controller;
 
 	private Vector3 moveDirection;
-	public float gravityScale;
+	public float gravityScale = 2f;
 
 	// Use this for initialization
 	void Start () {
@@ -27,6 +27,7 @@ public class playerControl : MonoBehaviour {
 		moveDirection = moveDirection.normalized * moveSpeed;
 		moveDirection.y = yStore;
 
+
 		if(controller.isGrounded) {
 
 			moveDirection.y = 0f;
@@ -35,6 +36,7 @@ public class playerControl : MonoBehaviour {
 				moveDirection.y = jumpForce;
 
 			}
+
 
 		}	
 		// Nimmt aktuelle Y-position und addiert die Schwerkraft
