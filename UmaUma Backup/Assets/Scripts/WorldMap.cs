@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class WorldMap : MonoBehaviour {
 
+
+	public GameManager _GameManager;
+
 	public Terrain WorldTerrain;
-	//public Terrain Water;
 	public LayerMask TerrainLayer;
-	//public LayerMask WaterLayer;
 	public static float TerrainLeft, TerrainRight, TerrainBottom, TerrainWidth, TerrainLength, TerrainHeight, TerrainTop;
 
 	public static ArrayList units = new ArrayList();
 	public static ArrayList positions = new ArrayList();
 	public static ArrayList rotations = new ArrayList();
+
+	int scOld;
 
 	public void Awake() {
 
@@ -30,6 +33,15 @@ public class WorldMap : MonoBehaviour {
 		
 	}
 
+	public void Update() {
+
+		int sc = _GameManager.GetComponent<GameManager>().score;
+
+		if ((sc != scOld) && (sc > scOld)) {
+			InstantiateRandomPosition("Prefabs/Cactus_Tall", 25, 0f);
+			scOld = sc;
+		}
+	}
 
 	public void InstantiateRandomPosition(string Resource, int Amount, float AddedHeight) {
 
