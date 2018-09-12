@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1439,6 +1439,147 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!1 &650828287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1485479799471030, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636966446}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 650828293}
+  - component: {fileID: 650828292}
+  - component: {fileID: 650828291}
+  - component: {fileID: 650828290}
+  - component: {fileID: 650828289}
+  - component: {fileID: 650828288}
+  - component: {fileID: 650828294}
+  m_Layer: 0
+  m_Name: Cactus_Tall
+  m_TagString: cactus
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &650828288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114269298741184212, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636966446}
+  m_GameObject: {fileID: 650828287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8412775af9f674119a6a78f2c1f4a652, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &650828289
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 65350610159079982, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636966446}
+  m_GameObject: {fileID: 650828287}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.133472, y: 3.843629, z: 1.0056679}
+  m_Center: {x: -0.017288983, y: 1.8517225, z: 0.0014429986}
+--- !u!64 &650828290
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 64074669297807076, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636966446}
+  m_GameObject: {fileID: 650828287}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300002, guid: 83969742e794b1e46a69d66f573bf098, type: 3}
+--- !u!23 &650828291
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23208699066082548, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636966446}
+  m_GameObject: {fileID: 650828287}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
+  m_Materials:
+  - {fileID: 2100000, guid: 8093a22d87ca55242b463c5692dd3b83, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &650828292
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33394162129247028, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636966446}
+  m_GameObject: {fileID: 650828287}
+  m_Mesh: {fileID: 4300002, guid: 83969742e794b1e46a69d66f573bf098, type: 3}
+--- !u!4 &650828293
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4712667235060400, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636966446}
+  m_GameObject: {fileID: 650828287}
+  m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.5308666, y: 0.12010726, z: -17.793285}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &650828294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114943078481181874, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1636966446}
+  m_GameObject: {fileID: 650828287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b700cca239fea42fbad3184d00d4deee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WorldTerrain: {fileID: 0}
+  TerrainLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  cactusHealth: 5
+  cactus: {fileID: 0}
+>>>>>>> 7222dc08c692d1311b1c87bec5d89951d04cafc5
 --- !u!1001 &773149473
 Prefab:
   m_ObjectHideFlags: 0
@@ -1833,6 +1974,7 @@ GameObject:
   - component: {fileID: 993523796}
   - component: {fileID: 993523791}
   - component: {fileID: 993523797}
+  - component: {fileID: 993523798}
   m_Layer: 0
   m_Name: hula
   m_TagString: Untagged
@@ -1946,6 +2088,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touchWater: 0
+--- !u!54 &993523798
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993523789}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1046018058
 GameObject:
   m_ObjectHideFlags: 0
@@ -2192,10 +2349,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3704b4c104884e498218c13d650d99c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WorldTerrain: {fileID: 649989115}
+  WorldTerrain: {fileID: 0}
   TerrainLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   treeHealth: 5
 --- !u!1001 &1308078860
 Prefab:
@@ -2339,13 +2496,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 993523795}
   offset: {x: 0, y: 0, z: 0}
-  rotateSpeed: 1
+  rotateSpeed: 5
   pivot: {fileID: 773593309}
   maxViewAngle: 65
   minViewAngle: -60
   invertY: 0
-  ScrollSensitivity: 2
-  ScrollSpeed: 6
 --- !u!20 &1312792916
 Camera:
   m_ObjectHideFlags: 0
