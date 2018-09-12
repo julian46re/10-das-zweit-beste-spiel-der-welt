@@ -1831,6 +1831,7 @@ GameObject:
   - component: {fileID: 993523790}
   - component: {fileID: 993523796}
   - component: {fileID: 993523791}
+  - component: {fileID: 993523797}
   m_Layer: 0
   m_Name: hula
   m_TagString: Untagged
@@ -1850,7 +1851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreTextObject: {fileID: 1132919757}
-  score: 0
+  score: 80
 --- !u!114 &993523791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1932,6 +1933,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   axe: {fileID: 265028946}
+--- !u!114 &993523797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993523789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b01055b7b72d4337b8f12d50b866c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1046018058
 GameObject:
   m_ObjectHideFlags: 0
@@ -2881,7 +2893,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1685ccb6d40d143be92510fe591087bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _GameManager: {fileID: 933841412}
+  _GameManager: {fileID: 993523790}
   WorldTerrain: {fileID: 649989115}
   TerrainLayer:
     serializedVersion: 2

@@ -6,13 +6,15 @@ public class WaterDamage : MonoBehaviour {
 
 	//private float playerHeight = 2.08f;
 	//public bool touchWater;
+	int i = 0;
 
 
-	void OnTriggerEnter (Collider touchWater) {
+	void OnTriggerStay (Collider touchWater) {
 		if (touchWater.gameObject.name == "Water") {
-			//gameObject.GetComponent<GameManager>().score -= 5;
+			gameObject.GetComponent<GameManager>().score -= 1;
 
-			Debug.Log(gameObject.name + " touched " + touchWater.gameObject.name);
+			Debug.Log(gameObject.name + " touched " + touchWater.gameObject.name + " " + i + " times");
+			i++;
 		}
 	}
 
