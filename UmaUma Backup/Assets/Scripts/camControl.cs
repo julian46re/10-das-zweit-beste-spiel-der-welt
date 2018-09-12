@@ -1,8 +1,13 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class camControl : MonoBehaviour {
+
+ 	float minFov = 25f;
+ 	float maxFov = 90f;
+ 	float sensitivity = 30f;
+
+
 
 	public Transform target;
 	public Vector3 offset;
@@ -12,9 +17,6 @@ public class camControl : MonoBehaviour {
 	public float minViewAngle;
 	public bool invertY;
 
-	public float ScrollSensitivity = 2f;
-	public float ScrollSpeed = 6f;
-	protected float CameraDistance = 10f;
 
 	// Use this for initialization
 	void Start () {
@@ -32,9 +34,24 @@ public class camControl : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 
+		if(Input.GetAxis("Mouse ScrollWheel") != 0) {
+
+			float fov = Camera.main.fieldOfView;
+   			fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
+   			fov = Mathf.Clamp(fov, minFov, maxFov);
+   			Camera.main.fieldOfView = fov;
+
+		}
+
+		//cameraDistance += Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
+     	//cameraDistance = Mathf.Clamp(cameraDistance, cameraDistanceMin, cameraDistanceMax);
+ 
+     	// set camera position
+
 		//Nimm die X-Position der Maus und dreh den Spieler mit
 		float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
 		target.Rotate(0, horizontal, 0);
+
 		
 		//Nimm die Y-Position der Maus und dreh den Pivot mit
 		float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
@@ -49,8 +66,6 @@ public class camControl : MonoBehaviour {
 
 		}
 
-		//Scroll in and out
-
 
 		//Kamerawinkel Limit
 		if(pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 180f ) {
@@ -59,11 +74,13 @@ public class camControl : MonoBehaviour {
 
 		}
 
+
 		if(pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360f + minViewAngle) {
 
 			pivot.rotation = Quaternion.Euler(360f + minViewAngle, 0, 0);
 
 		}
+
 
 		//Kamerabewegung an Spielerdrehung angepasst
 		float desiredYAngle = target.eulerAngles.y;
@@ -78,7 +95,9 @@ public class camControl : MonoBehaviour {
 
 		}
 
+
 		transform.LookAt(target);
 
 	}
+
 }
