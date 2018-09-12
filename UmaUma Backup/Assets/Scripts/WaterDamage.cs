@@ -4,30 +4,40 @@ using UnityEngine;
 
 public class WaterDamage : MonoBehaviour {
 
-	//private float playerHeight = 2.08f;
-	//public bool touchWater;
-	int i = 0;
+	private float playerHeight = 0.83f;
 
-
-	void OnTriggerStay (Collider touchWater) {
-		if (touchWater.gameObject.name == "Water") {
-			gameObject.GetComponent<GameManager>().score -= 1;
-
-			Debug.Log(gameObject.name + " touched " + touchWater.gameObject.name + " " + i + " times");
-			i++;
-		}
-	}
+	public bool touchWater;
 
 	
-	// // Update is called once per frame
-	// void FixedUpdate () {
-	// 	if (gameObject.transform.position.y >= playerHeight) {
-	// 		touchWater = true;
-	// 	}
+	// Update is called once per frame
+	void Update () {
 
-	// 	if (touchWater) {
-	// 		gameObject.GetComponent<GameManager>().score -= 5;
-	// 	}
+		if (gameObject.transform.position.y <= playerHeight) {
+			touchWater = true;
+		} else {
+			touchWater = false;
+		}
 
-	// }
+	}
+
+	void Start() {
+
+		StartCoroutine(DamagePlayerCR());
+
+	}
+
+	IEnumerator DamagePlayerCR () {
+
+    	while(true) { 
+        	
+        	if (touchWater) {
+        		gameObject.GetComponent<GameManager>().score -= 5;
+        	}
+
+
+        	yield return new WaitForSeconds(2);
+    	}
+
+	}
+
 }
