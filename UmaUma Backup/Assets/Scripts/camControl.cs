@@ -5,16 +5,17 @@ using UnityEngine;
 public class camControl : MonoBehaviour {
 
 	public Transform target;
+
 	public Vector3 offset;
+
 	public float rotateSpeed;
+
 	public Transform pivot;
+
 	public float maxViewAngle;
 	public float minViewAngle;
-	public bool invertY;
 
-	public float ScrollSensitivity = 2f;
-	public float ScrollSpeed = 6f;
-	protected float CameraDistance = 10f;
+	public bool invertY;
 
 	// Use this for initialization
 	void Start () {
@@ -48,9 +49,6 @@ public class camControl : MonoBehaviour {
 			pivot.Rotate(-vertical, 0, 0);
 
 		}
-
-		//Scroll in and out
-
 
 		//Kamerawinkel Limit
 		if(pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 180f ) {
