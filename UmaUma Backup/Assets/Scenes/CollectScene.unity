@@ -1440,7 +1440,10 @@ Transform:
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 1c6ee8d... update
 --- !u!1 &650828287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1573,6 +1576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b700cca239fea42fbad3184d00d4deee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   WorldTerrain: {fileID: 0}
   TerrainLayer:
     serializedVersion: 2
@@ -1580,6 +1584,14 @@ MonoBehaviour:
   cactusHealth: 5
   cactus: {fileID: 0}
 >>>>>>> 7222dc08c692d1311b1c87bec5d89951d04cafc5
+=======
+  WorldTerrain: {fileID: 649989115}
+  TerrainLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  cactusHealth: 5
+  cactus: {fileID: 650828287}
+>>>>>>> parent of 1c6ee8d... update
 --- !u!1001 &773149473
 Prefab:
   m_ObjectHideFlags: 0
@@ -2949,43 +2961,52 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4936849079537130, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
+    - target: {fileID: 4712667235060400, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.5308666
       objectReference: {fileID: 0}
-    - target: {fileID: 4936849079537130, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
+    - target: {fileID: 4712667235060400, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.12010726
       objectReference: {fileID: 0}
-    - target: {fileID: 4936849079537130, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
+    - target: {fileID: 4712667235060400, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
       propertyPath: m_LocalPosition.z
       value: -17.793285
       objectReference: {fileID: 0}
-    - target: {fileID: 4936849079537130, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
+    - target: {fileID: 4712667235060400, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0.00000008146034
       objectReference: {fileID: 0}
-    - target: {fileID: 4936849079537130, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
+    - target: {fileID: 4712667235060400, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4936849079537130, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
+    - target: {fileID: 4712667235060400, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4936849079537130, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
+    - target: {fileID: 4712667235060400, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4936849079537130, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
+    - target: {fileID: 4712667235060400, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
-    - target: {fileID: 114304186453336676, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
+    - target: {fileID: 114943078481181874, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
         type: 2}
       propertyPath: WorldTerrain
       value: 
       objectReference: {fileID: 649989115}
+    - target: {fileID: 1485479799471030, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
+      propertyPath: m_Name
+      value: Cactus_Tall
+      objectReference: {fileID: 0}
+    - target: {fileID: 114943078481181874, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
+        type: 2}
+      propertyPath: TerrainLayer.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
   m_IsPrefabParent: 0
