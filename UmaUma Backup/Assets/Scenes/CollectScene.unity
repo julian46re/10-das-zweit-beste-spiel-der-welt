@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1571,12 +1571,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b700cca239fea42fbad3184d00d4deee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WorldTerrain: {fileID: 649989115}
+  WorldTerrain: {fileID: 0}
   TerrainLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   cactusHealth: 5
-  cactus: {fileID: 650828287}
+  cactus: {fileID: 0}
 --- !u!1001 &773149473
 Prefab:
   m_ObjectHideFlags: 0
@@ -1971,6 +1971,7 @@ GameObject:
   - component: {fileID: 993523796}
   - component: {fileID: 993523791}
   - component: {fileID: 993523797}
+  - component: {fileID: 993523798}
   m_Layer: 0
   m_Name: hula
   m_TagString: Untagged
@@ -2084,6 +2085,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touchWater: 0
+--- !u!54 &993523798
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993523789}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1046018058
 GameObject:
   m_ObjectHideFlags: 0
@@ -2330,10 +2346,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3704b4c104884e498218c13d650d99c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WorldTerrain: {fileID: 649989115}
+  WorldTerrain: {fileID: 0}
   TerrainLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   treeHealth: 5
 --- !u!1001 &1308078860
 Prefab:
@@ -2477,13 +2493,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 993523795}
   offset: {x: 0, y: 0, z: 0}
-  rotateSpeed: 1
+  rotateSpeed: 5
   pivot: {fileID: 773593309}
   maxViewAngle: 65
   minViewAngle: -60
   invertY: 0
-  ScrollSensitivity: 2
-  ScrollSpeed: 6
 --- !u!20 &1312792916
 Camera:
   m_ObjectHideFlags: 0
