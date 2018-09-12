@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -882,6 +882,10 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5400000, guid: 70417e08343ef354db9a6c398faf67bc, type: 3}
+    - {fileID: 19300000, guid: 70417e08343ef354db9a6c398faf67bc, type: 3}
+    - {fileID: 19300002, guid: 70417e08343ef354db9a6c398faf67bc, type: 3}
+    - {fileID: 19300004, guid: 70417e08343ef354db9a6c398faf67bc, type: 3}
+    - {fileID: 19300006, guid: 70417e08343ef354db9a6c398faf67bc, type: 3}
   m_ParentPrefab: {fileID: 100100000, guid: 70417e08343ef354db9a6c398faf67bc, type: 3}
   m_IsPrefabParent: 0
 --- !u!1 &323678914 stripped
@@ -1477,6 +1481,7 @@ GameObject:
   - component: {fileID: 933841406}
   - component: {fileID: 933841411}
   - component: {fileID: 933841412}
+  - component: {fileID: 933841413}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1497,7 +1502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 15
   jumpForce: 10
-  controller: {fileID: 0}
+  controller: {fileID: 933841411}
   gravityScale: 2
 --- !u!136 &933841407
 CapsuleCollider:
@@ -1598,6 +1603,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreTextObject: {fileID: 1132919757}
   score: 0
+--- !u!114 &933841413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 933841405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b01055b7b72d4337b8f12d50b866c31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &947594338
 Prefab:
   m_ObjectHideFlags: 0
@@ -2349,6 +2365,7 @@ GameObject:
   - component: {fileID: 1443172442}
   - component: {fileID: 1443172441}
   - component: {fileID: 1443172446}
+  - component: {fileID: 1443172447}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -2432,13 +2449,28 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1443172440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 250, y: 0, z: 250}
+  m_LocalPosition: {x: 250, y: 0.1, z: 250}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1443172446
+--- !u!54 &1443172446
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1443172440}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &1443172447
 BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2448,7 +2480,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 800, y: 1, z: 800}
+  m_Size: {x: 800, y: 0.1, z: 800}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1502307666
 GameObject:
