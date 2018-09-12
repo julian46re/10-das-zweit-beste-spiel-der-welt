@@ -23,16 +23,30 @@ public class playerControl : MonoBehaviour {
 		
 		//moveDirection = new Vector3(Input.GetAxis("Horizontal") * moveSpeed, moveDirection.y, Input.GetAxis("Vertical") * moveSpeed);
 		float yStore = moveDirection.y;
-		moveDirection = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));	
+		moveDirection = (transform.forward * Input.GetAxisRaw("Vertical")) + (transform.right * Input.GetAxisRaw("Horizontal"));	
 		moveDirection = moveDirection.normalized * moveSpeed;
 		moveDirection.y = yStore;
 
+		//Wenn der Spieler den Boden berührt
 		if(controller.isGrounded) {
 
+			//Springen auf Leertaste
 			moveDirection.y = 0f;
 			if(Input.GetButtonDown("Jump")) {
 
 				moveDirection.y = jumpForce;
+
+			}
+
+
+			//Rennen auf left shift
+			if(Input.GetButton("Sprint")) {
+
+				moveSpeed = 25f;
+
+			} else {
+
+				moveSpeed = 15f;
 
 			}
 
