@@ -28,7 +28,7 @@ public class WorldMap : MonoBehaviour {
 		TerrainTop = TerrainBottom + TerrainLength;
 
 		InstantiateRandomPosition("Prefabs/Bad_Coconut", 700, 0.5f);
-		//InstantiateRandomPosition("Prefabs/Cactus_Tall", 2000, 0f);
+		InstantiateRandomPosition("Prefabs/Cactus_Tall", 2000, 0f);
 		InstantiateRandomPosition("Prefabs/Good_Coconut", 500, 0.5f);
 		
 	}

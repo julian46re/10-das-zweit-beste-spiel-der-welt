@@ -12,17 +12,21 @@ public class CollectNegative : MonoBehaviour {
     Text TriggerTextCactus;
 
     void OnTriggerEnter(Collider other) {
-        GameManager.instance.CollisionCactus(value, gameObject);
-        //Show Message on trigger to Cactus
-        TriggerTextCactus = GameObject.Find("Collision Text").GetComponent<Text>();
-        TriggerTextCactus.enabled = true;
-        TriggerTextCactus.text = "Ouch!!!";
+        //if (other.gameObject.name == "Cactus_Tall") {
+            GameManager.instance.CollisionCactus(value, gameObject);
+            //Show Message on trigger to Cactus
+            TriggerTextCactus = GameObject.Find("Collision Text").GetComponent<Text>();
+            TriggerTextCactus.enabled = true;
+            TriggerTextCactus.text = "Ouch!!!";
+        //}
     }
     
     //Remove Message by Trriger exit 
     void OnTriggerExit(Collider other) {
-        TriggerTextCactus = GameObject.Find("Collision Text").GetComponent<Text>();
-        TriggerTextCactus.enabled = false;
+        //if (other.gameObject.gameObject.name == "Cactus_Tall") {
+            TriggerTextCactus = GameObject.Find("Collision Text").GetComponent<Text>();
+            TriggerTextCactus.enabled = false;
+        //}
     }
     
     //Remove Text on Start scene
