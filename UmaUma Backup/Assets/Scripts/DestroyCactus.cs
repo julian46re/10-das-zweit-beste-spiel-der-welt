@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Tree : MonoBehaviour {
+public class DestroyCactus : MonoBehaviour {
     //Variables
 
     public Terrain WorldTerrain;
     public LayerMask TerrainLayer;
     public static float TerrainLeft, TerrainRight, TerrainBottom, TerrainWidth, TerrainLength, TerrainHeight, TerrainTop;
 
-    GameObject thisTree;
-    public int treeHealth = 5;
+    public int cactusHealth = 5;
     private bool isFallen = false;
     Text TriggerTextCactus;
+    public GameObject cactus;
     
     private void Start() {
-        thisTree = transform.parent.gameObject;
+    	cactus = transform.gameObject;
 
         TerrainLeft = WorldTerrain.transform.position.x;
         TerrainBottom = WorldTerrain.transform.position.z;
@@ -28,37 +28,37 @@ public class Tree : MonoBehaviour {
     }
 
     private void Update() {
-        if(treeHealth > 0 && treeHealth < 3) {
+        if(cactusHealth > 0 && cactusHealth < 3) {
             TriggerTextCactus = GameObject.Find("Collision Text").GetComponent<Text>();
             TriggerTextCactus.enabled = true;
             TriggerTextCactus.text = "Nochmal schlagen!";
-        } else if (treeHealth == 0) {
+        } else if (cactusHealth == 0) {
             TriggerTextCactus.enabled = false;
         }
         
-        if(treeHealth <= 0 && isFallen == false) {
-            Rigidbody rb = thisTree.AddComponent<Rigidbody>();
+        if(cactusHealth <= 0 && isFallen == false) {
+            Rigidbody rb = cactus.AddComponent<Rigidbody>();
             rb.isKinematic = false;
             rb.useGravity = true;
             rb.AddForce(Vector3.forward, ForceMode.Impulse);
-            StartCoroutine(destroyTree());
+            StartCoroutine(destroyCactus());
             isFallen = true;
-            //SHow Coconuts from tree
+            //SHow Coconuts from cactus
             StartCoroutine(ShowCoconuts());
         }   
    
     }
 
-    private IEnumerator destroyTree() {
+    private IEnumerator destroyCactus() {
         yield return new WaitForSeconds(5);
         //thisTree.active = false;
-        Destroy(thisTree);
+        Destroy(cactus);
     }
     
-    //Timer to show coconuts from tree
+    //Timer to show coconuts from cactus
     private IEnumerator ShowCoconuts() {
         yield return new WaitForSeconds(3);
-        InstantiateCertainPosition("Prefabs/Good_Coconut", 5, 0.5f);
+        InstantiateCertainPosition("Prefabs/Bad_Coconut", 1, 0.5f);
     }
 
 

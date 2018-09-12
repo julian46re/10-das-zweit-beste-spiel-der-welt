@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tree
   - ShowCoconut
+  - cactus
   layers:
   - Default
   - TransparentFX

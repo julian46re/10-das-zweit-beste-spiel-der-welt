@@ -31,6 +31,10 @@ public class AxeRaycast : MonoBehaviour {
                 Tree treeScript = hit.collider.gameObject.GetComponent<Tree>();
                 treeScript.treeHealth = treeScript.treeHealth - 1;
             }
+            if(hit.collider.tag == "cactus" && Input.GetMouseButtonDown(0) && isEquiped == true) {
+
+                GameObject.Find("Cactus_Tall").GetComponent<DestroyCactus>().cactusHealth --; 
+            }
         }
     }
 }
