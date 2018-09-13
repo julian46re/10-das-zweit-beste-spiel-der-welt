@@ -17,6 +17,8 @@ public class camControl : MonoBehaviour {
 	public float minViewAngle;
 	public bool invertY;
 
+	public bool menuClose = true;
+
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +32,8 @@ public class camControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
+
+		while(menuClose) {
 
 		if(Input.GetAxis("Mouse ScrollWheel") != 0) {
 
@@ -90,6 +94,7 @@ public class camControl : MonoBehaviour {
 
 			transform.position = new Vector3(transform.position.x, target.position.y -.5f, transform.position.z);
 
+		}
 		}
 
 

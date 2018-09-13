@@ -26,9 +26,10 @@ public class PauseGame : MonoBehaviour {
 
 	}
 
-	void Resume() {
+	public void Resume() {
 
 		//GetComponent<camControl>.enabled = true;
+		GameObject.Find("MainCamera").GetComponent<camControl>().enabled = true;
 		pauseMenuUI.SetActive(false);
 		Time.timeScale = 1f;
 		GameIsPaused = false;
@@ -38,11 +39,20 @@ public class PauseGame : MonoBehaviour {
 	void Pause() {
 
 		//GetComponent<camControl>.enabled = false;
-		Cursor.visible = true;
-		Cursor.lockState = CursorLockMode.None;
+		GameObject.Find("MainCamera").GetComponent<camControl>().enabled = false;
 		pauseMenuUI.SetActive(true);
 		Time.timeScale = 0f;
 		GameIsPaused = true;
+	}
+
+	public void LoadMenu() {
+		Debug.Log("Hello Menu");
+	}
+
+	public void QuitGame() {
+
+		Debug.Log("Quitter");
+
 	}
 
 }
