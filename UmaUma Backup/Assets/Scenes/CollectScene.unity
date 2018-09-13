@@ -1588,6 +1588,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 1c6ee8d... update
+=======
+>>>>>>> parent of 1c6ee8d... update
 --- !u!1 &650828287
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,12 +1728,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b700cca239fea42fbad3184d00d4deee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+<<<<<<< HEAD
   WorldTerrain: {fileID: 0}
   TerrainLayer:
     serializedVersion: 2
     m_Bits: 0
   cactusHealth: 5
   cactus: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &758486587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,6 +1813,22 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 758486587}
+=======
+>>>>>>> 7222dc08c692d1311b1c87bec5d89951d04cafc5
+=======
+=======
+>>>>>>> parent of 1c6ee8d... update
+  WorldTerrain: {fileID: 649989115}
+  TerrainLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  cactusHealth: 5
+  cactus: {fileID: 650828287}
+<<<<<<< HEAD
+>>>>>>> parent of 1c6ee8d... update
+=======
+>>>>>>> parent of 1c6ee8d... update
+>>>>>>> 878c7062c5a11414c580078ea9396c8b4d39c01c
 --- !u!1001 &773149473
 Prefab:
   m_ObjectHideFlags: 0
