@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1077,6 +1077,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.133472, y: 3.843629, z: 1.0056679}
   m_Center: {x: -0.017288983, y: 1.8517225, z: 0.0014429986}
+--- !u!114 &323678922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 323678914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b700cca239fea42fbad3184d00d4deee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WorldTerrain: {fileID: 0}
+  TerrainLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  cactusHealth: 5
+  cactus: {fileID: 0}
 --- !u!1 &366878366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,7 +1626,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &650828288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1711,9 +1728,8 @@ Transform:
 --- !u!114 &650828294
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114943078481181874, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1636966446}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 650828287}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -3626,7 +3642,12 @@ Prefab:
       propertyPath: TerrainLayer.m_Bits
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1485479799471030, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: f8bd7b7bb199048aa9fe380e9d4b3e8d, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1663647193 stripped
@@ -4121,6 +4142,10 @@ Prefab:
     - target: {fileID: 100000, guid: 83969742e794b1e46a69d66f573bf098, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 83969742e794b1e46a69d66f573bf098, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83969742e794b1e46a69d66f573bf098, type: 3}

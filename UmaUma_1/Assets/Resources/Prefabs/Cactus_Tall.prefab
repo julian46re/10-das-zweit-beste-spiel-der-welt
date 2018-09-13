@@ -24,9 +24,10 @@ GameObject:
   - component: {fileID: 64074517032495162}
   - component: {fileID: 65243653583048546}
   - component: {fileID: 114873512970643958}
+  - component: {fileID: 114209440808261266}
   m_Layer: 0
   m_Name: Cactus_Tall
-  m_TagString: Untagged
+  m_TagString: cactus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,6 +113,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.133472, y: 3.843629, z: 1.0056679}
   m_Center: {x: -0.017288983, y: 1.8517225, z: 0.0014429986}
+--- !u!114 &114209440808261266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992910081278968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b700cca239fea42fbad3184d00d4deee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WorldTerrain: {fileID: 0}
+  TerrainLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  cactusHealth: 5
+  cactus: {fileID: 0}
 --- !u!114 &114873512970643958
 MonoBehaviour:
   m_ObjectHideFlags: 1

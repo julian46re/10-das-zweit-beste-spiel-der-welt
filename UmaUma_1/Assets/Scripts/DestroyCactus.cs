@@ -17,6 +17,9 @@ public class DestroyCactus : MonoBehaviour {
     
     private void Start() {
     	cactus = transform.gameObject;
+        WorldTerrain = GameObject.Find("WorldMap").GetComponent<Terrain>();
+        TerrainLayer = 1;
+        gameObject.tag = "cactus";
 
         TerrainLeft = WorldTerrain.transform.position.x;
         TerrainBottom = WorldTerrain.transform.position.z;
