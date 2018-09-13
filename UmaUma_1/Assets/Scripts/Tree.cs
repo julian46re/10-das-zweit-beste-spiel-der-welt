@@ -17,6 +17,9 @@ public class Tree : MonoBehaviour {
     
     private void Start() {
         thisTree = transform.parent.gameObject;
+        WorldTerrain = GameObject.Find("WorldMap").GetComponent<Terrain>();
+        TerrainLayer = 1;
+        gameObject.tag = "tree";
 
         TerrainLeft = WorldTerrain.transform.position.x;
         TerrainBottom = WorldTerrain.transform.position.z;

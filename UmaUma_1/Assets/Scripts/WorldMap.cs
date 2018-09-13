@@ -30,6 +30,7 @@ public class WorldMap : MonoBehaviour {
 		InstantiateRandomPosition("Prefabs/Bad_Coconut", 700, 0.5f);
 		InstantiateRandomPosition("Prefabs/Cactus_Tall", 2000, 0f);
 		InstantiateRandomPosition("Prefabs/Good_Coconut", 500, 0.5f);
+		InstantiateRandomPosition("Prefabs/Conifer_Desktop", 100, 0f);
 		
 	}
 
@@ -47,6 +48,9 @@ public class WorldMap : MonoBehaviour {
 
 		var i = 0;
 		float terrainHeight = 0f;
+
+		//Name = Resource.typeof(GameObject)
+
 		RaycastHit hit;
 		float randomPositionX, randomPositionY, randomPositionZ;
 		Vector3 randomPosition = Vector3.zero;
@@ -68,8 +72,8 @@ public class WorldMap : MonoBehaviour {
 
 			randomPosition = new Vector3(randomPositionX, randomPositionY, randomPositionZ);
 
-			Instantiate(Resources.Load (Resource, typeof(GameObject)), randomPosition, Quaternion.identity);
-
+			var NewCactus = (GameObject) Instantiate(Resources.Load (Resource, typeof(GameObject)), randomPosition, Quaternion.identity);
+			NewCactus.name = Resource + i;
 
 		} while (i < Amount);
 
