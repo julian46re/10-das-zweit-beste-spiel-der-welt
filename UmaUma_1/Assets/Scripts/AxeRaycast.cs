@@ -34,6 +34,8 @@ public class AxeRaycast : MonoBehaviour {
             if(hit.collider.tag == "cactus" && Input.GetMouseButtonDown(0) && isEquiped == true) {
 
                 GameObject.Find("Cactus_Tall").GetComponent<DestroyCactus>().cactusHealth --; 
+
+                Debug.Log("Cactus hit!");
             }
         }
     }
