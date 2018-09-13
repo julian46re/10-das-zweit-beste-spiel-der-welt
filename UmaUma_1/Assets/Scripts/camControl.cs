@@ -34,16 +34,12 @@ public class camControl : MonoBehaviour {
 		if(Input.GetAxis("Mouse ScrollWheel") != 0) {
 
 			float fov = Camera.main.fieldOfView;
-   			fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
+   			fov -= Input.GetAxis("Mouse ScrollWheel") * sensitivity;
    			fov = Mathf.Clamp(fov, minFov, maxFov);
    			Camera.main.fieldOfView = fov;
 
 		}
 
-		//cameraDistance += Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
-     	//cameraDistance = Mathf.Clamp(cameraDistance, cameraDistanceMin, cameraDistanceMax);
- 
-     	// set camera position
 
 		//Nimm die X-Position der Maus und dreh den Spieler mit
 		float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
@@ -52,6 +48,7 @@ public class camControl : MonoBehaviour {
 		
 		//Nimm die Y-Position der Maus und dreh den Pivot mit
 		float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
+
 		//pivot.Rotate(-vertical, 0, 0);
 		if(invertY) {
 
@@ -92,9 +89,7 @@ public class camControl : MonoBehaviour {
 
 		}
 
-
-
-
+		Cursor.visible = false;
 		transform.LookAt(target);
 
 	}

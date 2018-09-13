@@ -28,7 +28,7 @@ public class PauseGame : MonoBehaviour {
 
 	void Resume() {
 
-		//GetComponent<camControl>.enabled = true;
+		GameObject.Find("MainCamera").GetComponent<camControl>().menuClose = true;
 		pauseMenuUI.SetActive(false);
 		Time.timeScale = 1f;
 		GameIsPaused = false;
@@ -37,7 +37,7 @@ public class PauseGame : MonoBehaviour {
 
 	void Pause() {
 
-		//GetComponent<camControl>.enabled = false;
+		GameObject.Find("MainCamera").GetComponent<camControl>().menuClose = false;
 		Cursor.visible = true;
 		Cursor.lockState = CursorLockMode.None;
 		pauseMenuUI.SetActive(true);
