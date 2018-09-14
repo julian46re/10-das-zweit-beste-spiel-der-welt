@@ -36,7 +36,7 @@ public class PauseGame : MonoBehaviour {
 
 	}
 
-	void Pause() {
+	public void Pause() {
 
 		//GetComponent<camControl>.enabled = false;
 		GameObject.Find("MainCamera").GetComponent<camControl>().enabled = false;

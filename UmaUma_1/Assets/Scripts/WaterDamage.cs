@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class WaterDamage : MonoBehaviour {
 
@@ -28,6 +29,12 @@ public class WaterDamage : MonoBehaviour {
 
 		ShowHealth();
 		heOld = gameObject.GetComponent<GameManager>().health;
+
+		if (heOld <= 0) {
+
+			Restart();
+
+		}
 
 	}
 
@@ -66,6 +73,12 @@ public class WaterDamage : MonoBehaviour {
     		GameObject.Find("Health Text").GetComponent<Text>().text = "Health: " + gameObject.GetComponent<GameManager>().health.ToString();
 
     	}
+
+    }
+
+    void Restart () {
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
 

@@ -1,8 +1,8 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 
 public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour {
         
         //Show begin score
         scoreText = scoreTextObject.GetComponent<Text>();
-        scoreText.text = "Score: " + health.ToString();
+        scoreText.text = "Score: " + score.ToString();
 
         healthText = healthTextObject.GetComponent<Text>();
         healthText.text = "Score: " + health.ToString();
@@ -66,34 +66,6 @@ public class GameManager : MonoBehaviour {
         scoreText.text = "Score: " + score.ToString();  
         health = health - passedValue;
         healthText.text = "Health: " + health.ToString();    
-
-    }
-
-    void Update() {
-
-        if (health <= 0) {
-
-            GameOver();
-
-        }
-
-    }
-
-    void GameOver () {
-
-        if (gameHasEnded == false) {
-
-            gameHasEnded = true;
-            Debug.Log("LOOL DEAD");
-            Invoke("Restart", restartDelay);
-
-        }
-
-    }
-
-    void Restart () {
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
 
