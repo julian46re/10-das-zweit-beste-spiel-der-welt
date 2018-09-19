@@ -69,4 +69,9 @@ public class GameManager : MonoBehaviour {
 
     }
 
+    public void CollisionEnemy(int passedValue, GameObject passedObject) {
+        health = health - passedValue;
+        healthText.text = "Health: " + health.ToString();
+    }
+
 }

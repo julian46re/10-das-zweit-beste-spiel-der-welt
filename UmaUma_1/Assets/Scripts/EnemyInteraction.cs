@@ -10,6 +10,8 @@ public class EnemyInteraction : MonoBehaviour {
 	private bool isFallen = false;
     Text TriggerTextEnemy;
     public GameObject enemy;
+    //public GameManager _GM;
+    //public GameObject player;
 
 	void OnDrawGizmosSelected () {
 		Gizmos.color = Color.yellow;
@@ -18,6 +20,8 @@ public class EnemyInteraction : MonoBehaviour {
 
 	private void Start() {
 		enemy = transform.gameObject;
+        //player = GameObject.Find("hula").transform.gameObject;
+        //_GM = GameObject.Find("hula").GetComponent<GameManager>();
 	}
 
 	private void Update() {
@@ -37,20 +41,31 @@ public class EnemyInteraction : MonoBehaviour {
             StartCoroutine(destroyEnemy());
             isFallen = true;
             //SHow Coconuts from cactus
-            StartCoroutine(ShowCoconuts());
+            //StartCoroutine(ShowCoconuts());
         }   
    
     }
 
     private IEnumerator destroyEnemy() {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(0.5f);
         //thisTree.active = false;
         Destroy(enemy);
     }
     
-    //Timer to show coconuts from cactus
-    private IEnumerator ShowCoconuts() {
-        yield return new WaitForSeconds(3);
-        //InstantiateCertainPosition("Prefabs/Bad_Coconut", 1, 0.5f);
+    // //Timer to show coconuts from cactus
+    // private IEnumerator ShowCoconuts() {
+    //     yield return new WaitForSeconds(3);
+    //     //InstantiateCertainPosition("Prefabs/Bad_Coconut", 1, 0.5f);
+    // }
+
+    private void DamagePlayer() {
+        GameObject.Find("hula").GetComponent<GameManager>().health -= 5;
     }
+
+    private void OnTriggerEnter(Collider playerHit) {
+        if (playerHit.gameObject.tag == "Player") {
+            DamagePlayer();
+        }
+    }
+
 }
