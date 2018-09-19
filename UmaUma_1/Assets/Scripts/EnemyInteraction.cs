@@ -12,6 +12,8 @@ public class EnemyInteraction : MonoBehaviour {
     public GameObject enemy;
     //public GameManager _GM;
     //public GameObject player;
+    //private Vector3 EnemyPosition, PlayerPosition, Offset;
+    //private Vector3 MaxOffset;
 
 	void OnDrawGizmosSelected () {
 		Gizmos.color = Color.yellow;
@@ -22,9 +24,17 @@ public class EnemyInteraction : MonoBehaviour {
 		enemy = transform.gameObject;
         //player = GameObject.Find("hula").transform.gameObject;
         //_GM = GameObject.Find("hula").GetComponent<GameManager>();
+        //MaxOffset.Set(0.5f, 0.5f, 0.5f);
+        //StartCoroutine(Damage());
+
 	}
 
 	private void Update() {
+
+        //EnemyPosition = enemy.transform.position;
+        //PlayerPosition = GameObject.Find("hula").transform.position;
+        //Offset = EnemyPosition - PlayerPosition;
+
         if(enemyHealth > 0 && enemyHealth < 3) {
             TriggerTextEnemy = GameObject.Find("Collision Text").GetComponent<Text>();
             TriggerTextEnemy.enabled = true;
@@ -62,10 +72,17 @@ public class EnemyInteraction : MonoBehaviour {
         GameObject.Find("hula").GetComponent<GameManager>().health -= 5;
     }
 
-    private void OnTriggerEnter(Collider playerHit) {
+    void OnTriggerStay(Collider playerHit) {
         if (playerHit.gameObject.tag == "Player") {
             DamagePlayer();
         }
     }
+
+    // private IEnumerator Damage() {
+    //     if (Vector3.Distance(PlayerPosition, EnemyPosition) <= 0.5f) {
+    //         DamagePlayer();
+    //     }
+    //     yield return new WaitForSeconds(1);
+    // }
 
 }
