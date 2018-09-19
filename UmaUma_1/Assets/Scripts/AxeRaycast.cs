@@ -40,6 +40,13 @@ public class AxeRaycast : MonoBehaviour {
                 GameObject.Find(HitObjName).GetComponent<DestroyCactus>().cactusHealth --; 
 
             }
+
+            if(hit.collider.tag == "enemy" && Input.GetMouseButtonDown(0) && isEquiped == true) {
+                Debug.Log("Enemy hit!");
+                string HitObjName = hit.collider.gameObject.name;
+                GameObject.Find(HitObjName).GetComponent<EnemyInteraction>().enemyHealth --;
+
+            }
         }
     }
 }
