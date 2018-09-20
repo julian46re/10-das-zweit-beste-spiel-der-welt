@@ -31,6 +31,7 @@ public class WorldMap : MonoBehaviour {
 		InstantiateRandomPosition("Prefabs/Cactus_Tall", 2000, 0f);
 		InstantiateRandomPosition("Prefabs/Good_Coconut", 500, 0.5f);
 		InstantiateRandomPosition("Prefabs/Conifer_Desktop", 100, 0f);
+		InstantiateRandomPosition("Prefabs/Enemy", 3, 0.2f);
 		
 	}
 
