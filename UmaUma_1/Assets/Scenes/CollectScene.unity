@@ -4233,7 +4233,10 @@ BoxCollider:
   m_Size: {x: 0.405327, y: 0.97263795, z: 0.389207}
   m_Center: {x: -0.014488503, y: 0.4847, z: -0.0033505037}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 7b159fbbae809d4aab9bc357cd1f826f8f6fe49f
 --- !u!1 &1674730800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4308,6 +4311,9 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1674730800}
+<<<<<<< HEAD
+>>>>>>> 7b159fbbae809d4aab9bc357cd1f826f8f6fe49f
+=======
 >>>>>>> 7b159fbbae809d4aab9bc357cd1f826f8f6fe49f
 --- !u!1 &1687681490
 GameObject:
