@@ -45,15 +45,15 @@ public class PauseGame : MonoBehaviour {
 		GameIsPaused = true;
 	}
 
-	public void LoadMenu() {
-		Debug.Log("Hello Menu");
-	}
+	//public void LoadMenu() {
+	//	Debug.Log("Hello Menu");
+	//}
 
-	public void QuitGame() {
+	//public void QuitGame() {
 
-		Debug.Log("Quitter");
+	//	Debug.Log("Quitter");
 
-	}
+	//}
 
 }
 

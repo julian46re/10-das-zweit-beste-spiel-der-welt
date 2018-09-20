@@ -32,8 +32,6 @@ public class GameManager : MonoBehaviour {
 
         healthText = healthTextObject.GetComponent<Text>();
         healthText.text = "Score: " + health.ToString();
-
-
     }   
     
     //Collect Coconut
@@ -61,17 +59,10 @@ public class GameManager : MonoBehaviour {
     
     //Collision Cactus
     // - Score and - Health
-    public void CollisionCactus(int passedValue, GameObject passedObject){
+    public void CollisionCactus(int passedValue, GameObject passedObject) {
         score = score - passedValue;
         scoreText.text = "Score: " + score.ToString();  
         health = health - passedValue;
         healthText.text = "Health: " + health.ToString();    
-
     }
-
-    public void CollisionEnemy(int passedValue, GameObject passedObject) {
-        health = health - passedValue;
-        healthText.text = "Health: " + health.ToString();
-    }
-
 }
