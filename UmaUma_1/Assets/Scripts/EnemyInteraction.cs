@@ -72,7 +72,7 @@ public class EnemyInteraction : MonoBehaviour {
         GameObject.Find("hula").GetComponent<GameManager>().health -= 5;
     }
 
-    void OnTriggerStay(Collider playerHit) {
+    void OnTriggerEnter(Collider playerHit) {
         if (playerHit.gameObject.tag == "Player") {
             DamagePlayer();
         }
