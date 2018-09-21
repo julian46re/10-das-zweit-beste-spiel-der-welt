@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.Networking;
 
 public class TimeDoDeath : MonoBehaviour {
@@ -10,7 +11,7 @@ public class TimeDoDeath : MonoBehaviour {
     public GameObject gameOverMenu;
     public GameObject timerTextObject;
     public GameObject image;
-    private float timer = 11f;
+    private float timer = 4f;
     private Text timerSecond;
     private Image img;
     //private float nextActionTime = 0.0f;
@@ -40,9 +41,13 @@ public class TimeDoDeath : MonoBehaviour {
             timerSecond.alignment = TextAnchor.MiddleCenter;
             timerSecond.fontSize = 150;
             timerSecond.text = "" + timer.ToString("f0");
-            //if ((timer % 2) == 0) {
+            //if (Mathf.Repeat(timer.ToString("f0"), 2) == "0") {
             //Debug.Log(timer);
-            if(timer.ToString("f0") == "10" || timer.ToString("f0") == "8" || timer.ToString("f0") == "6" || timer.ToString("f0") == "4" || timer.ToString("f0") == "2") {
+            if(timer.ToString("f0") == "10" ||
+                timer.ToString("f0") == "8" || 
+                timer.ToString("f0") == "6" ||
+                timer.ToString("f0") == "4" ||
+                timer.ToString("f0") == "2") {
                 //Debug.Log(img.enabled);
                 img.enabled = true;
             } else  {
@@ -54,10 +59,19 @@ public class TimeDoDeath : MonoBehaviour {
             //show exit menu
             timerSecond.text = "";
             GameOver();
+
+            if (Input.GetKeyDown(KeyCode.Escape)) {
+                LoadScene();
+            }
+            
         }
 	}
+    
+    public void LoadScene() {
+        SceneManager.LoadScene("MainMenu");
+    }
 
-  public void GameOver() {
+    public void GameOver() {
         //GetComponent<camControl>.enabled = false;
         GameObject.Find("MainCamera").GetComponent<camControl>().enabled = false;
         // Ändern auf anderes Menu
@@ -66,9 +80,9 @@ public class TimeDoDeath : MonoBehaviour {
         GameIsPaused = true;
     }
     
-    private IEnumerator showBackground() {
-        img.enabled = true;
-        yield return new WaitForSeconds(2);
-        img.enabled = false;
-    }
+    //private IEnumerator showBackground() {
+    //    img.enabled = true;
+    //    yield return new WaitForSeconds(2);
+    //    img.enabled = false;
+    //}
 }
