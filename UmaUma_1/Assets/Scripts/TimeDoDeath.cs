@@ -11,7 +11,7 @@ public class TimeDoDeath : MonoBehaviour {
     public GameObject gameOverMenu;
     public GameObject timerTextObject;
     public GameObject image;
-    private float timer = 4f;
+    public float timer = 90f;
     private Text timerSecond;
     private Image img;
     //private float nextActionTime = 0.0f;
