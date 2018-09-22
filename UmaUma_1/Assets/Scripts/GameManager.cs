@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour {
         healthText = healthTextObject.GetComponent<Text>();
         healthText.text = "Score: " + health.ToString();
     }   
+
     
     //Collect Coconut
     public void Collect(int passedValue, GameObject passedObject) {
