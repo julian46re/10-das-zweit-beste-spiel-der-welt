@@ -4,11 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DestroyCactus : MonoBehaviour {
-    //Variables
 
     public Terrain WorldTerrain;
     public LayerMask TerrainLayer;
-    public static float TerrainLeft, TerrainRight, TerrainBottom, TerrainWidth, TerrainLength, TerrainHeight, TerrainTop;
 
     public int cactusHealth = 5;
     private bool isFallen = false;
@@ -16,21 +14,17 @@ public class DestroyCactus : MonoBehaviour {
     public GameObject cactus;
     
     private void Start() {
+
+        //Zuweisungen
     	cactus = transform.gameObject;
         WorldTerrain = GameObject.Find("WorldMap").GetComponent<Terrain>();
         TerrainLayer = 1;
         gameObject.tag = "cactus";
 
-        TerrainLeft = WorldTerrain.transform.position.x;
-        TerrainBottom = WorldTerrain.transform.position.z;
-        TerrainWidth = WorldTerrain.terrainData.size.x;
-        TerrainLength = WorldTerrain.terrainData.size.z;
-        TerrainHeight = WorldTerrain.terrainData.size.y;
-        TerrainRight = TerrainLeft + TerrainWidth;
-        TerrainTop = TerrainBottom + TerrainLength;
     }
 
     private void Update() {
+
         if(cactusHealth > 0 && cactusHealth < 3) {
             TriggerTextCactus = GameObject.Find("Collision Text").GetComponent<Text>();
             TriggerTextCactus.enabled = true;
@@ -46,25 +40,29 @@ public class DestroyCactus : MonoBehaviour {
             rb.AddForce(Vector3.forward, ForceMode.Impulse);
             StartCoroutine(destroyCactus());
             isFallen = true;
-            //SHow Coconuts from cactus
             StartCoroutine(ShowCoconuts());
         }   
    
     }
 
+    //Funtion zerstört Kaktus nach 5s
     private IEnumerator destroyCactus() {
+
         yield return new WaitForSeconds(5);
-        //thisTree.active = false;
         Destroy(cactus);
+
     }
     
-    //Timer to show coconuts from cactus
+    //Funktion spawnt 1 schlechte Kokosnuss nach 2s
     private IEnumerator ShowCoconuts() {
-        yield return new WaitForSeconds(3);
+
+        yield return new WaitForSeconds(2);
         InstantiateCertainPosition("Prefabs/Bad_Coconut", 1, 0.5f);
+
     }
 
 
+    //Funktion setzt Spawn-Position für Objekt in bestimmtem Abstand zum Kaktus
     public void InstantiateCertainPosition(string Resource, int Amount, float AddedHeight) {
 
         var i = 0;
@@ -92,8 +90,8 @@ public class DestroyCactus : MonoBehaviour {
 
             Instantiate(Resources.Load (Resource, typeof(GameObject)), randomPosition, Quaternion.identity);
 
-
         } while (i < Amount);
 
     }
+
 }

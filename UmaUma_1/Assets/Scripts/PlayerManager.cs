@@ -6,12 +6,15 @@ public class PlayerManager : MonoBehaviour {
 
 
 	public static PlayerManager instance;
-
-	void Awake () {
-		instance = this;
-	}
-
-
 	public GameObject player;
 
+	void Awake () {
+
+		instance = this;
+
+	}
+
 }
+
+
+//Wichtig für den Zugriff von "EnemyController.cs"

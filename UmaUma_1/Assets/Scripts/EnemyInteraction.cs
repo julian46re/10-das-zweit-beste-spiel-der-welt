@@ -10,30 +10,15 @@ public class EnemyInteraction : MonoBehaviour {
 	private bool isFallen = false;
     Text TriggerTextEnemy;
     public GameObject enemy;
-    //public GameManager _GM;
-    //public GameObject player;
-    //private Vector3 EnemyPosition, PlayerPosition, Offset;
-    //private Vector3 MaxOffset;
 
-	void OnDrawGizmosSelected () {
-		Gizmos.color = Color.yellow;
-		Gizmos.DrawWireSphere(transform.position, interactRadius);
-	}
 
 	private void Start() {
+
 		enemy = transform.gameObject;
-        //player = GameObject.Find("hula").transform.gameObject;
-        //_GM = GameObject.Find("hula").GetComponent<GameManager>();
-        //MaxOffset.Set(0.5f, 0.5f, 0.5f);
-        //StartCoroutine(Damage());
 
 	}
 
 	private void Update() {
-
-        //EnemyPosition = enemy.transform.position;
-        //PlayerPosition = GameObject.Find("hula").transform.position;
-        //Offset = EnemyPosition - PlayerPosition;
 
         if(enemyHealth > 0 && enemyHealth < 3) {
             TriggerTextEnemy = GameObject.Find("Collision Text").GetComponent<Text>();
@@ -56,33 +41,36 @@ public class EnemyInteraction : MonoBehaviour {
    
     }
 
+    //Funktion zerstört Enemy nach 0.5s
     private IEnumerator destroyEnemy() {
+
         yield return new WaitForSeconds(0.5f);
-        //thisTree.active = false;
         Destroy(enemy);
+
     }
     
-    // //Timer to show coconuts from cactus
-    // private IEnumerator ShowCoconuts() {
-    //     yield return new WaitForSeconds(3);
-    //     //InstantiateCertainPosition("Prefabs/Bad_Coconut", 1, 0.5f);
-    // }
-
+    //Funktion zieht dem Player 5 Leben ab
     private void DamagePlayer() {
+
         GameObject.Find("hula").GetComponent<GameManager>().health -= 5;
+
     }
 
+    //Funktion ruft bei Berührung zwischen Player und Enemy "DamagePlayer()" auf
     void OnTriggerEnter(Collider playerHit) {
+
         if (playerHit.gameObject.tag == "Player") {
             DamagePlayer();
         }
+
     }
 
-    // private IEnumerator Damage() {
-    //     if (Vector3.Distance(PlayerPosition, EnemyPosition) <= 0.5f) {
-    //         DamagePlayer();
-    //     }
-    //     yield return new WaitForSeconds(1);
-    // }
+    //Funktion zeichnet WireSphere
+    void OnDrawGizmosSelected () {
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, interactRadius);
+
+    }
 
 }
