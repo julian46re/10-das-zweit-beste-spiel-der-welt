@@ -7,8 +7,6 @@ public class camControl : MonoBehaviour {
  	float maxFov = 90f;
  	float sensitivity = 30f;
 
-
-
 	public Transform target;
 	public Vector3 offset;
 	public float rotateSpeed;
