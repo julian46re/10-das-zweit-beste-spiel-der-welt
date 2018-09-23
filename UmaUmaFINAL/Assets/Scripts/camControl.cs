@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using UnityEngine;
 
 public class camControl : MonoBehaviour {
@@ -19,8 +19,9 @@ public class camControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
+		//Abstand zwischen Kamera und Spieler (Position Figur - Position Kamera)
 		offset = target.position - transform.position;
-
+		//Pivot an Figur binden
 		pivot.transform.position = target.transform.position;
 		pivot.transform.parent = target.transform;
 		
@@ -29,22 +30,22 @@ public class camControl : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 
+		//Scrollfunktion der Kamera
 		if(Input.GetAxis("Mouse ScrollWheel") != 0) {
 
-			float fov = Camera.main.fieldOfView;
-   			fov -= Input.GetAxis("Mouse ScrollWheel") * sensitivity;
-   			fov = Mathf.Clamp(fov, minFov, maxFov);
+			float fov = Camera.main.fieldOfView; //Kamera Field of View einbinden
+   			fov -= Input.GetAxis("Mouse ScrollWheel") * sensitivity; //Scroll und Schnelligkeit
+   			fov = Mathf.Clamp(fov, minFov, maxFov); //Stellt Grenze des Scrollens
    			Camera.main.fieldOfView = fov;
 
 		}
-
 
 		//Nimm die X-Position der Maus und dreh den Spieler mit
 		float horizontal = Input.GetAxis("Mouse X") * rotateSpeed;
 		target.Rotate(0, horizontal, 0);
 
 		
-		//Nimm die Y-Position der Maus und dreh den Pivot mit
+		//Nimm die Y-Position der Maus und dreh den Pivot mit, damit sich die Figur nicht nach vorne und hinten neigt
 		float vertical = Input.GetAxis("Mouse Y") * rotateSpeed;
 
 		//pivot.Rotate(-vertical, 0, 0);
@@ -58,7 +59,6 @@ public class camControl : MonoBehaviour {
 
 		}
 
-
 		//Kamerawinkel Limit
 		if(pivot.rotation.eulerAngles.x > maxViewAngle && pivot.rotation.eulerAngles.x < 180f ) {
 
@@ -66,13 +66,11 @@ public class camControl : MonoBehaviour {
 
 		}
 
-
 		if(pivot.rotation.eulerAngles.x > 180f && pivot.rotation.eulerAngles.x < 360f + minViewAngle) {
 
 			pivot.rotation = Quaternion.Euler(360f + minViewAngle, 0, 0);
 
 		}
-
 
 		//Kamerabewegung an Spielerdrehung angepasst
 		float desiredYAngle = target.eulerAngles.y;
@@ -87,8 +85,8 @@ public class camControl : MonoBehaviour {
 
 		}
 
-		Cursor.visible = false;
-		transform.LookAt(target);
+		Cursor.visible = false; //Maus ausblenden
+		transform.LookAt(target); //Kamera schau Figur an
 
 	}
 
