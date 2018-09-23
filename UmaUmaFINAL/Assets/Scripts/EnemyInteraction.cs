@@ -20,14 +20,6 @@ public class EnemyInteraction : MonoBehaviour {
 
 	private void Update() {
 
-        // if(enemyHealth > 0 && enemyHealth < 3) {
-        //     TriggerTextEnemy = GameObject.Find("Collision Text").GetComponent<Text>();
-        //     TriggerTextEnemy.enabled = true;
-        //     TriggerTextEnemy.text = "Nochmal schlagen!";
-        // } else if (enemyHealth == 0) {
-        //     TriggerTextEnemy.enabled = false;
-        // }
-        
         if(enemyHealth <= 0 && isFallen == false) {
             Rigidbody rb = enemy.GetComponent<Rigidbody>();
             rb.isKinematic = false;
@@ -35,8 +27,6 @@ public class EnemyInteraction : MonoBehaviour {
             rb.AddForce(Vector3.forward, ForceMode.Impulse);
             StartCoroutine(destroyEnemy());
             isFallen = true;
-            //SHow Coconuts from cactus
-            //StartCoroutine(ShowCoconuts());
         }   
    
     }
