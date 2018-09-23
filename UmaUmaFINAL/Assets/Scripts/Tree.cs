@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Tree : MonoBehaviour {
     //Variables
-
     public Terrain WorldTerrain;
     public LayerMask TerrainLayer;
     
@@ -19,8 +18,6 @@ public class Tree : MonoBehaviour {
         WorldTerrain = GameObject.Find("WorldMap").GetComponent<Terrain>();
         TerrainLayer = 1;
         gameObject.tag = "tree";
-
-        
     }
 
     private void Update() {
@@ -42,7 +39,6 @@ public class Tree : MonoBehaviour {
             //SHow Coconuts from tree
             StartCoroutine(ShowCoconuts());
         }   
-   
     }
 
     private IEnumerator destroyTree() {

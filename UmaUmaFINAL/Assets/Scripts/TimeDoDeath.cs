@@ -14,21 +14,13 @@ public class TimeDoDeath : MonoBehaviour {
     public float timer = 90f;
     private Text timerSecond;
     private Image img;
-    //private float nextActionTime = 0.0f;
-    //public int period = 2;
     //End Variables Timer
-    
-    private bool toggleGUI ;
-    private Texture2D textureToDisplay;
 
 	// Use this for initialization
 	void Start () {
         img = image.GetComponent<Image>();
         timerSecond = timerTextObject.GetComponent<Text>();
         img.enabled = false;
-        // if (timer <= 10 && timer >= 0) {
-        //    StartCoroutine(showBackground());
-        //}
 	}
     
 	// Update is called once per frame
@@ -48,12 +40,13 @@ public class TimeDoDeath : MonoBehaviour {
                 timer.ToString("f0") == "6" ||
                 timer.ToString("f0") == "4" ||
                 timer.ToString("f0") == "2") {
-                //Debug.Log(img.enabled);
+                
                 img.enabled = true;
             } else  {
                 img.enabled = false;
             
             }
+            
         } else if (timer <= 0) {
             //timer kleiner 0 tot 
             //show exit menu
@@ -62,8 +55,7 @@ public class TimeDoDeath : MonoBehaviour {
 
             if (Input.GetKeyDown(KeyCode.Escape)) {
                 LoadScene();
-            }
-            
+            }   
         }
 	}
     

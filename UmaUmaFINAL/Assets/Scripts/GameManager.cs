@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour {
     bool gameHasEnded = false;
     public float restartDelay = 1f;
 
-
     //Function for begin of game
     private void Awake() {
         if (instance == null) {
@@ -35,14 +34,13 @@ public class GameManager : MonoBehaviour {
 
         // healthText = healthTextObject.GetComponent<Text>();
         // healthText.text = "Score: " + health.ToString();
-
-
     }   
 
     void Update() {
         if (score <= 0) {
             score = 0;
         }
+        
         if (health == 0) {
             GameObject.Find("MainCamera").GetComponent<camControl>().enabled = false;
             // Ändern auf anderes Menu
@@ -53,7 +51,6 @@ public class GameManager : MonoBehaviour {
                 SceneManager.LoadScene("MainMenu");
             }
             Cursor.visible = true;
-            
         }
 
         if (score == 200) {
@@ -64,9 +61,6 @@ public class GameManager : MonoBehaviour {
             Cursor.visible = true;
         }
     }
-    
-    
-
     
     //Collect Coconut
     public void Collect(int passedValue, GameObject passedObject) {
@@ -79,7 +73,6 @@ public class GameManager : MonoBehaviour {
     }
     
     //Collect Negative Coconut
-    // - Score and - Health
     public void CollectNegativeCoconut(int passedValue, GameObject passedObject) {
         passedObject.GetComponent<Renderer>().enabled = false;
         passedObject.GetComponent<Collider>().enabled = false;
@@ -92,7 +85,6 @@ public class GameManager : MonoBehaviour {
     }
     
     //Collision Cactus
-    // - Score and - Health
     public void CollisionCactus(int passedValue, GameObject passedObject){
         //score = score - passedValue;
         //scoreText.text = "Score: " + score.ToString();  
