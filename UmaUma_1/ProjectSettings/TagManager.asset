@@ -8,7 +8,6 @@ TagManager:
   - ShowCoconut
   - cactus
   - enemy
-  - EnemyCanvas
   layers:
   - Default
   - TransparentFX
