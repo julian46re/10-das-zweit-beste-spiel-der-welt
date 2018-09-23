@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: bae67830f0be4624eabfb8dfe521a3e8
   - enabled: 1
+    path: Assets/Scenes/Dialogue.unity
+    guid: 63cdc6d3c3f67a542b809e92491fd854
+  - enabled: 1
     path: Assets/Scenes/CollectScene.unity
     guid: 2a23d3cbe7e0e4cd6a692ad6f3f6f267
-  - enabled: 1
-    path: Assets/Scenes/NachtSzene.unity
-    guid: b64b0899f9839461ba1da62f76f967a9
   m_configObjects: {}

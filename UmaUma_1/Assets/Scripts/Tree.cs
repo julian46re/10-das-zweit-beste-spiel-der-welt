@@ -64,7 +64,7 @@ public class Tree : MonoBehaviour {
         InstantiateCertainPosition("Prefabs/Good_Coconut", 5, 0.5f);
     }
 
-
+//Philip 
     public void InstantiateCertainPosition(string Resource, int Amount, float AddedHeight) {
 
         var i = 0;
